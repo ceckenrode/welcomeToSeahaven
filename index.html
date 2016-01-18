@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{Title}</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/paper/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/rnyvab7/VFDo0vio8/style.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top box-shadow--6dp">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://www.developtest1991.tumblr.com/">Seahaven</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li id="home"><a href="http://www.developtest1991.tumblr.com/">Home</a></li>
+          <li id="listen"><a href="http://www.developtest1991.tumblr.com/listen">Listen</a></li>
+          <li id="exhibitions"><a href="http://www.developtest1991.tumblr.com/exhibitions">Exhibitions</a></li>
+          <li id="merchandise"><a href="http://developtest1991.tumblr.com/merchandise">Merchandise</a></li>
+          <li id="contact"><a href="http://www.developtest1991.tumblr.com/contact">Contact</a></li>
+          <li id="archive"><a href="http://www.developtest1991.tumblr.com/archive">Archive</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron box-shadow--3dp">
+    <div class="container">
+      <img src="http://static.tumblr.com/rnyvab7/GOKo0pwi8/seahavenpuravida.png" width="450" class="img-responsive logo">
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="margincol col-sm-8 col-sm-offset-2">
+        <div class="mainContent">
+          <div id="content">
+
+            {block:Posts}
+              <div id="posts">
+
+                {block:Photo}
+                <div class="panel panel-default box-shadow--6dp">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                      {block:Caption}
+                        <div class="text">
+                          {Caption}
+                        </div>
+                      {/block:Caption}
+                    </h3>
+                  </div>
+                  <div class="panel-body">
+                    {LinkOpenTag}
+                      <img src="{PhotoURL-500}" class="img-responsive photopost"/>
+                    {LinkCloseTag}
+                  </div>
+                </div>
+                {/block:Photo}
+                {block:Photoset}
+                  <div class="panel panel-default box-shadow--6dp">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">
+                        {block:Caption}
+                          <div class="text">
+                            {Caption}
+                          </div>
+                        {/block:Caption}
+                      </h3>
+                    </div>
+                    <div class="panel-body">
+                      {Photoset-500}
+                    </div>
+                  </div>
+                {/block:Photoset}
+                {block:Video}
+                  <div class="panel panel-default box-shadow--6dp">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">
+                        {block:Caption}
+                          <div class="text">
+                            {Caption}
+                          </div>
+                        {/block:Caption}
+                      </h3>
+                    </div>
+                    <div class="panel-body">
+                      {Video-500}
+                    </div>
+                  </div>
+                {/block:Video} 
+                {block:Audio}
+                  <div class="panel panel-default box-shadow--6dp">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">
+                        {block:Caption}
+                          <div class="text">
+                            {Caption}
+                          </div>
+                        {/block:Caption}
+                      </h3>
+                    </div>
+                    <div class="panel-body">
+                      {AudioPlayerBlack}
+                        <div class="text">
+                          ~ {PlayCountWithLabel}
+                        </div>
+                      </div>
+                    </div>
+                {/block:Audio}
+                {block:Quote}
+                  <div class="panel panel-default box-shadow--6dp">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">
+                        <div class="title">
+                          “{Quote}”
+                        </div>
+                      </h3>
+                    </div>
+                    <div class="panel-body">
+                      {block:Source}
+                        <div class="text">
+                          <br>~ {Source}
+                        </div>
+                      {/block:Source}
+                    </div>
+                  </div>
+                {/block:Quote}
+                {block:Text}
+                  <div class="panel panel-default box-shadow--6dp">
+                    <div class="panel-heading">
+                      {block:Title}
+                        <div class="title">
+                          <h3>
+                            {Title}
+                          </h3>
+                        </div>
+                      {/block:Title}
+                    </div>
+                    <div class="panel-body">
+                      <div class="text">
+                      <p>{Body}</p>
+                    </div>
+                  </div>
+                </div>
+              {/block:Text}
+              {block:Answer}
+                <div class="panel panel-default box-shadow--6dp">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                      <div class="title">
+                      {Question}
+                      </div>
+                    </h3>
+                  </div>
+                  <div class="panel-body">
+                    <div class="text">
+                      ~ {Asker}
+                    </div>
+                    <div class="text">
+                      {Answer}
+                    </div>
+                  </div>
+                </div>
+              {/block:Answer}
+              {block:Chat}
+                <div class="panel panel-default box-shadow--6dp">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                      {block:Title}
+                        <div class="title">
+                          {Title}
+                        </div>
+                      {/block:Title}
+                    </h3>
+                  </div>
+                  <div class="panel-body">
+                    <div class="text">
+                      {block:Lines}
+                      {block:Label}
+                      <strong>
+                        {Label}
+                      </strong>
+                      {/block:Label}
+                      {Line}
+                      <br>
+                      {/block:Lines}
+                    </div>
+                    <!--text-->
+                  </div>
+                </div>
+              {/block:Chat}
+              {block:Link}
+                <div class="panel panel-default box-shadow--6dp">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                      <div class="title">
+                        <a href="{URL}">
+                          {Name}
+                        </a>
+                      </div>
+                    </h3>
+                  </div>
+                  <div class="panel-body">
+                    {block:Description}
+                      <div class="text">
+                        {Description}
+                      </div>
+                    {/block:Description}
+                  </div>
+                </div>
+              {/block:Link}
+              </div>
+              <!--posts-->
+            {/block:Posts}
+          </div>
+          <!--content-->
+
+          <p class="text-center">
+            {block:PreviousPage}
+            <a href="{PreviousPage}" class="btn btn-default box-shadow--6dp">Previous</a> {/block:PreviousPage} {block:NextPage}
+            <a href="{NextPage}" class="btn btn-default box-shadow--6dp">Next</a> {/block:NextPage}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="box-shadow--8dp">
+    <p>WelcometoSeahaven.com</p>
+    <a href="https://www.facebook.com/welcometoseahaven/" target="_blank">
+      <i class="fa fa-facebook-square fa-2x"></i>
+    </a>
+    <a href="https://twitter.com/seahaventweets" target="_blank">
+      <i class="fa fa-twitter-square fa-2x"></i>
+    </a>
+    <a href="https://www.instagram.com/seahavenpuravida" target="_blank">
+      <i class="fa fa-instagram fa-2x"></i>
+    </a>
+    <a href="itmss://itunes.apple.com/us/artist/seahaven/id376605217?ign-msr=http%3A%2F%2Fdeveloptest1991.tumblr.com%2Fmerchandise">
+      <i class="fa fa-music fa-2x"></i>
+    </a>
+  </footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="http://static.tumblr.com/rnyvab7/xtlo0rq35/seahaven.js"></script>
+
+</body>
+
+</html>
